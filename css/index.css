@@ -1,0 +1,216 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: merriweather;
+    src: url('../fonts/merriweather/Merriweather-Regular.ttf');
+}
+
+@font-face {
+    font-family: merriweather-italic;
+    src: url('../fonts/merriweather/Merriweather-Italic.ttf');
+}
+
+html {
+    font-family: arvo;
+}
+
+.main {
+    width:100%;
+    height: 100vh;
+    /*background-color:#acacac;*/
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.thanks {
+    font-size:18px;
+}
+
+.left {
+    width:45%;
+    height: 80%;
+    /*background-color: pink;*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    width:auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.right-content {
+ /*background-color: yellow;*/
+ height:50%;
+ display:flex;
+ flex-direction: column;
+ justify-content: space-around;
+}
+
+#download-button {
+    width: 200px;
+    height:40px;
+    color:white;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.header {
+    font-size: 35px;
+    font-family: merriweather-italic;
+}
+
+.description {
+    font-size:19px;
+    color:rgba(87, 87, 87, 0.8);
+    font-family: sans-serif;
+}
+
+.download-menu {
+    width:100%;
+    height:100vh;
+    /*background-color: pink;*/
+    position:absolute;
+    z-index:100;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(30px);
+}
+
+.menu {
+    width:35%;
+    background-color: white;
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #6c63ff;
+}
+
+.menu-content {
+    width:100%;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+.username-field, .email-field {
+    width:100%;
+    padding-left:10px;
+    font-size: 16px;
+    font-family:merriweather;
+}
+
+.username-field {
+    margin-bottom:10px;
+}
+
+.email-field {
+    margin-bottom:20px;
+}
+
+.menu-header {
+    margin-bottom:20px;
+    font-size:20px;
+    font-family:merriweather-italic;
+}
+
+#download-now {
+    width:100%;
+}
+
+.username-label, .email-label {
+    font-size:17px;
+    font-family:merriweather;
+    color: rgba(39, 39, 39, 0.8);
+}
+
+.username, .email {
+    /*background-color: pink;*/
+    width:100%;
+    margin-bottom:10px;
+}
+
+.username input, .email input {
+    height:35px;
+    border-radius: 3px;
+    border:1px solid rgba(12, 12, 12, 0.705);
+    outline:none;
+}
+
+
+.right {
+    width:45%;
+    height:80%;
+    /*background-color: blue;*/
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:760px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        height:90vh;
+    }
+
+    .left {
+        width:100%;
+        height:50%;
+    }
+
+    .left img {
+        background-color: pink;
+    }
+
+    .right {
+        width:90%;
+        height:50%;
+        margin-top:0px;
+        padding-top:0px;
+    }
+
+    .right-content {
+        width:100%;
+        height:100%;
+        /*background-color: yellow;*/
+        justify-content: space-around;
+    }
+
+    .header {
+        font-size:25px;
+    }
+
+    .description {
+      
+    }
+
+    #download-button {
+        width:100%;
+    }
+
+    .menu {
+        width:90%;
+    }
+
+    .menu-content {
+        padding-left:30px;
+        padding-right:30px;
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+
+    .username-label, .email-label {
+        font-size: 16px;
+    }
+}

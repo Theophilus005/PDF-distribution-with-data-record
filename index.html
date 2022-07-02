@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="./libraries/toastr/toastr.css">
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div id="loading" style="display:none">
+        <div class="spinner">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div>
+    </div>
+
+
+    <div class="download-menu">
+        <div class="menu">
+            <div class="menu-content">
+                <p class="menu-header">Fill out the form below to download</p>
+                <div class="username">
+                    <div class="username-label">Username</div>
+                    <input type="text" class="username-field">
+                </div>
+
+                <div class="email">
+                    <div class="email-label">Email</div>
+                    <input type="text" class="email-field">
+                </div>
+
+                <button id="download-now" onclick="submitForm()"
+                    class="button button-3d button-primary button-rounded">Download Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="left"><img src="./images/reading_time_crop.png" alt=""></div>
+        <div class="right">
+            <div class="right-content">
+                <p class="header">LANGUAGE & EDI AT WORK</p>
+                <div class="description">
+                    Steps to download the pdf.<br><br>
+                    1. Click on the dowload button below.<br>
+                    2. Enter your name and email. <br>
+                    3. Click on download.
+                    
+                </div>
+                <button id="download-button" onclick="showMenu()"
+                    class="button button-3d button-primary button-rounded">Download</button>
+                <a href="pdf/LANGUAGE & EDI AT WORK.pdf" style="display: none" id="get_file" download>Click to
+                    download</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="libraries/toastr/toastr.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        if ($(window).width() > 760) {
+            var toast_position = "toast-top-right";
+        } else {
+            toast_position = "toast-top-center";
+        }
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": toast_position,
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+
+    });
+</script>
+
+
+</html>

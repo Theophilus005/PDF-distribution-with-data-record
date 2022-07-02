@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth</title>
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../libraries/toastr/toastr.css">
+    <script src="../js/index.js"></script>
+</head>
+<body>
+
+    <div id="loading" style="display:none">
+        <div class="spinner">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="label"><span class="admin-text">Admin</span>Records</div>
+    </div>
+
+    </div>
+    <div class="main">
+        <div class="panel">
+            <p class="header">Enter pin to view records</p>
+            <div class="pin-field">
+                <input type="text" id="pin" placeholder="Pin">
+            </div>
+
+            <button id="view" onclick="validatePin()" class="button button-3d button-primary button-rounded">View Records</button>
+
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+<script src="../libraries/toastr/toastr.min.js"></script>
+  
+    <script>
+    $(document).ready(function() {
+  
+      if ($(window).width() > 760) {
+        var toast_position = "toast-top-right";
+      } else {
+        toast_position = "toast-top-center";
+      }
+  
+      toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": toast_position,
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      }
+  
+    });
+  </script>
+ 
+</body>
+</html>
